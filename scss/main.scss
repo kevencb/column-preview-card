@@ -1,0 +1,114 @@
+//@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca:wght@300&display=swap");
+
+:root {
+  --brightOrange: hsl(31, 77%, 52%);
+  --darkCyan: hsl(184, 100%, 22%);
+  --veryDarkCyan: hsl(179, 100%, 13%);
+  --transparentWhite: hsla(0, 0%, 100%, 0.75); //paragraphs
+  --veryLightGray: hsl(0, 0%, 95%); // background, headings, buttons
+  --white: #fff;
+  --fontTitle: "Big Shoulders Display", serif;
+  --fontParagraph: "Lexend Deca", serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: var(--fontParagraph);
+  @media (min-width: 1260px) {
+    display: grid;
+    align-content: center;
+    height: 100vh;
+  }
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  max-width: 920px;
+  margin: 88px auto 24px;
+  border-radius: 8px;
+  overflow: hidden;
+  @media (min-width: 1260px) {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    height: 500px;
+  }
+  .card {
+    padding: 48px;
+    color: var(--white);
+    @media (min-width: 1260px) {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    &__top {
+      &__icon {
+        width: 6.4rem;
+        margin-bottom: 3.5rem;
+      }
+      &__title {
+        font-size: 4rem;
+        text-transform: uppercase;
+        margin-bottom: 2.5rem;
+        font-family: var(--fontTitle);
+      }
+      &__content {
+        font-size: 1.5rem;
+        margin-bottom: 2.5rem;
+      }
+    }
+    &__action {
+      display: inline-flex;
+      max-width: fit-content;
+      flex-grow: 0;
+      background-color: var(--white);
+      padding: 1.1rem 3.15rem 1.2rem;
+      font-size: 1.5rem;
+      line-height: 2.5rem;
+      border-radius: 10rem;
+      border: 2px solid transparent;
+      transition: all ease-in-out 0.3s;
+    }
+    &__action:hover {
+      background-color: transparent;
+      border: 2px solid var(--white);
+      color: var(--white);
+    }
+  }
+  .card__01 {
+    background-color: var(--brightOrange);
+    a {
+      color: var(--brightOrange);
+    }
+  }
+  .card__02 {
+    background-color: var(--darkCyan);
+    a {
+      color: var(--darkCyan);
+    }
+  }
+  .card__03 {
+    background-color: var(--veryDarkCyan);
+    a {
+      color: var(--veryDarkCyan);
+    }
+  }
+}
+
+footer {
+  margin: 2.4rem auto;
+  text-align: center;
+}
