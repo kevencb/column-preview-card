@@ -23,6 +23,7 @@ html {
 
 body {
   font-family: var(--fontParagraph);
+  background-color: var(--veryLightGray);
 }
 @media (min-width: 1260px) {
   body {
@@ -111,7 +112,13 @@ main .card__03 a {
   color: var(--veryDarkCyan);
 }
 
-footer {
-  margin: 2.4rem auto;
+footer.attribution {
+  margin: 24px auto;
   text-align: center;
+  font-size: 11px;
+  text-align: center;
+}
+footer.attribution a {
+  font-weight: bold;
+  color: var(--darkCyan);
 }/*# sourceMappingURL=main.css.map */

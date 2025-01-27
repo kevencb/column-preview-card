@@ -25,6 +25,7 @@ html {
 
 body {
   font-family: var(--fontParagraph);
+  background-color: var(--veryLightGray);
   @media (min-width: 1260px) {
     display: grid;
     align-content: center;
@@ -108,7 +109,13 @@ main {
   }
 }
 
-footer {
-  margin: 2.4rem auto;
+footer.attribution {
+  margin: 24px auto;
   text-align: center;
+  font-size: 11px;
+  text-align: center;
+  a {
+    font-weight: bold;
+    color: var(--darkCyan);
+  }
 }
